@@ -1,0 +1,465 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "output/libbenchmark.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"add_definitions",
+			"cxx_feature_check",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"OpenXLSX/Benchmarks/gbench/src/CMakeLists.txt",
+			"OpenXLSX/Benchmarks/gbench/cmake/CXXFeatureCheck.cmake",
+			"OpenXLSX/Benchmarks/gbench/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 280,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 61,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 291,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 61,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 301,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "  -std=c++11  -Wall  -Wextra  -Wshadow  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -g -std=c++17 -fvisibility=hidden -fno-keep-inline-dllexport -fdiagnostics-color=always"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "HAVE_STD_REGEX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_STEADY_CLOCK"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "C:/Users/profe/CLionProjects/sharepoint/OpenXLSX/Benchmarks/gbench/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/profe/CLionProjects/sharepoint/OpenXLSX/Benchmarks/gbench/src"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "C:/Users/profe/CLionProjects/sharepoint/OpenXLSX/Benchmarks/gbench/src/../include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				5,
+				6,
+				8,
+				11,
+				13,
+				15,
+				17,
+				18,
+				20,
+				23,
+				26,
+				29,
+				30,
+				32,
+				34,
+				36,
+				39
+			]
+		}
+	],
+	"id" : "benchmark::@d0ff6ca8614eae35aff9",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/sharepoint"
+		}
+	},
+	"name" : "benchmark",
+	"nameOnDisk" : "libbenchmark.a",
+	"paths" : 
+	{
+		"build" : "OpenXLSX/Benchmarks/gbench/src",
+		"source" : "OpenXLSX/Benchmarks/gbench/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				4,
+				7,
+				9,
+				10,
+				12,
+				14,
+				16,
+				19,
+				21,
+				22,
+				24,
+				25,
+				27,
+				28,
+				31,
+				33,
+				35,
+				37,
+				38,
+				40
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				5,
+				6,
+				8,
+				11,
+				13,
+				15,
+				17,
+				18,
+				20,
+				23,
+				26,
+				29,
+				30,
+				32,
+				34,
+				36,
+				39
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/include/benchmark/benchmark.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/arraysize.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_api_internal.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_api_internal.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_name.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_register.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_register.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_runner.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/benchmark_runner.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/check.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/colorprint.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/colorprint.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/commandlineflags.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/commandlineflags.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/complexity.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/complexity.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/console_reporter.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/counter.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/counter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/csv_reporter.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/cycleclock.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/internal_macros.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/json_reporter.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/log.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/mutex.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/perf_counters.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/perf_counters.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/re.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/reporter.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/sleep.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/sleep.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/statistics.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/statistics.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/string_util.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/string_util.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/sysinfo.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/thread_manager.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/thread_timer.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/timers.cc",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OpenXLSX/Benchmarks/gbench/src/timers.h",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

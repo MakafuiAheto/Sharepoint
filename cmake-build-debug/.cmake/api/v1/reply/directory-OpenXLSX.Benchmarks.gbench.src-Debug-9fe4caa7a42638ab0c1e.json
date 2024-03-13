@@ -1,0 +1,153 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"OpenXLSX/Benchmarks/gbench/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 108,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 116,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"output/libbenchmark.a"
+			],
+			"targetId" : "benchmark::@d0ff6ca8614eae35aff9",
+			"targetIndex" : 11,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"output/libbenchmark_main.a"
+			],
+			"targetId" : "benchmark_main::@d0ff6ca8614eae35aff9",
+			"targetIndex" : 12,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"OpenXLSX/Benchmarks/gbench/include/benchmark"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/benchmark",
+			"paths" : 
+			[
+				"cmake-build-debug/OpenXLSX/Benchmarks/gbench/src/generated/benchmarkConfig.cmake",
+				"cmake-build-debug/OpenXLSX/Benchmarks/gbench/src/generated/benchmarkConfigVersion.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"cmake-build-debug/OpenXLSX/Benchmarks/gbench/src/generated/benchmark.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/benchmark",
+			"exportName" : "benchmarkTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "benchmark::@d0ff6ca8614eae35aff9",
+					"index" : 11
+				},
+				{
+					"id" : "benchmark_main::@d0ff6ca8614eae35aff9",
+					"index" : 12
+				}
+			],
+			"paths" : 
+			[
+				"OpenXLSX/Benchmarks/gbench/src/CMakeFiles/Export/d56d27b88fbb159d81f220d5e4f5f598/benchmarkTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/sharepoint/share/doc/benchmark",
+			"paths" : 
+			[
+				{
+					"from" : "OpenXLSX/Benchmarks/gbench/docs",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "OpenXLSX/Benchmarks/gbench/src",
+		"source" : "OpenXLSX/Benchmarks/gbench/src"
+	}
+}
