@@ -20,7 +20,8 @@ std::unordered_map<int, std::string> read_file(std::ifstream& filestream){
 
 int main() {
 
-    std::ifstream filestream("./text.txt");
+    std::ifstream filestream;
+    filestream.open("./text.txt");
 
     if(filestream.is_open()){
         auto read_map = std::make_shared<std::unordered_map<int , std::string>>(

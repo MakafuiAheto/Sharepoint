@@ -10,28 +10,45 @@
 #include <iostream>
 #include <string>
 #include <tuple>
+#include <exception>
+#include <set>
 
-class Sharepoint{
+namespace SharepointHandler{
+
+    class Sharepoint {
+
+    public:
+        Sharepoint(std::string sharepoint_url, std::string username,
+                   std::string password, std::string root_url);
+
+        ~ Sharepoint();
+
+        void download_file_type(const std::string &folder_name,
+                                const std::tuple<std::string> &file_types);
+
+        static void convert_text_files_to_excel(const std::string &folderPath,
+                                           std::set<std::string> &extension_list);
+
+    private:
+        std::string sharepoint_url;
+        std::string username;
+        std::string password;
+        std::string root_url;
+
+
+    };
+
+
+class Sharepoint_Exception: public std::exception{
 
 public:
-    Sharepoint(const std::string& sharepoint_url, const std::string& username,
-               const std::string& password, const std::string& root_url);
-
-    ~ Sharepoint();
-
-    void download_file_type(const std::string& folder_name,
-                            const std::tuple<std::string>& file_types);
-
-    void convert_files_to_excel(const std::string& folderPath,
-                                const std::tuple<std::string>& extension_list);
+    explicit Sharepoint_Exception(char * error_message);
+    virtual const char* what() noexcept;
 
 private:
-    std::string sharepoint_url;
-    std::string username;
-    std::string password;
-    std::string root_url;
+    char* error_message;
 
-
+};
 
 
 
