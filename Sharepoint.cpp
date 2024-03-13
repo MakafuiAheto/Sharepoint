@@ -36,10 +36,12 @@ void SharepointHandler::Sharepoint::convert_text_files_to_excel(const std::strin
 
         auto file_path = std::make_unique<std::string>(entry.path().string());
         auto file_extension = std::make_unique<std::string>(entry.path().extension().string());
+
+
         
         if(!entry.is_directory() &&
-        extension_list.find((*file_extension)) != extension_list.end()){
-            std::ifstream filestream((*file_path));
+        extension_list.find(*std::move(file_extension)) != extension_list.end()){
+            std::ifstream filestream(*std::move(file_path));
 
             if(filestream.is_open()){
 
