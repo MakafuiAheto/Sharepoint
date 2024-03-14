@@ -28,7 +28,7 @@ namespace SharepointHandler{
                                 const std::tuple<std::string> &file_types);
 
         static void convert_text_files_to_excel(const std::string &folderPath,
-                                           std::set<std::string> &extension_list);
+                                           std::set<std::string> &extension_list, char delimiter);
 
     private:
         std::string sharepoint_url;

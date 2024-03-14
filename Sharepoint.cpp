@@ -36,21 +36,22 @@ SharepointHandler::Sharepoint::Sharepoint(std::string sharepoint_url, std::strin
     excel_document.workbook().addWorksheet(sheet_name);
     OpenXLSX::XLWorksheet worksheet = excel_document.workbook().worksheet(sheet_name);
 
-    while(!stream.eof()){
+    while(std::getline(stream, line )){
 
         std::vector<std::string> row_values;
-        while( std::getline(stream, line , delimiter)){
-            row_values.push_back(line);
-        }
-
         std::stringstream shared_stream(line);
+
+        while( std::getline(shared_stream, line , delimiter)){
+            row_values.push_back(std::move(line));
+        }
         worksheet.row(iterator).values() = row_values;
+        ++iterator;
     }
 
 }
 
 void SharepointHandler::Sharepoint::convert_text_files_to_excel(const std::string &folderPath,
-                                        std::set<std::string> &extension_list) {
+                                        std::set<std::string> &extension_list, char delimiter) {
 
     std::srand(std::time(nullptr));
     int randomNumber = std::rand();
@@ -70,12 +71,14 @@ void SharepointHandler::Sharepoint::convert_text_files_to_excel(const std::strin
             std::ifstream filestream(*std::move(file_path));
 
             if(filestream.is_open()){
-
-
+                write_to_new_sheet(entry.path().stem().string(), delimiter, excelDocument, filestream);
             }
 
         }
     }
+
+    excelDocument.save();
+    excelDocument.close();
 
 }
 
