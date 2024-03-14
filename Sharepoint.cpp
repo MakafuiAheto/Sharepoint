@@ -5,8 +5,8 @@
 #include "Sharepoint.h"
 #include <utility>
 #include <filesystem>
-#include <OpenXLSX.hpp>
 #include <fstream>
+#include <cmath>
 
 template<typename T, class Lambda>
 constexpr bool any_of_impl(std::vector<T> &&tup, Lambda lambda, int iterator=0){
@@ -27,8 +27,36 @@ SharepointHandler::Sharepoint::Sharepoint(std::string sharepoint_url, std::strin
                             username(std::move(username)), password(std::move(password)),
                             root_url(std::move(root_url)){}
 
+
+[[maybe_unused]] void SharepointHandler::Sharepoint::write_to_new_sheet(const std::string &sheet_name, char delimiter,
+                                                       OpenXLSX::XLDocument &excel_document, std::ifstream& stream) {
+
+    int iterator = 1;
+    std::string line;
+    excel_document.workbook().addWorksheet(sheet_name);
+    OpenXLSX::XLWorksheet worksheet = excel_document.workbook().worksheet(sheet_name);
+
+    while(!stream.eof()){
+
+        std::vector<std::string> row_values;
+        while( std::getline(stream, line , delimiter)){
+            row_values.push_back(line);
+        }
+
+        std::stringstream shared_stream(line);
+        worksheet.row(iterator).values() = row_values;
+    }
+
+}
+
 void SharepointHandler::Sharepoint::convert_text_files_to_excel(const std::string &folderPath,
                                         std::set<std::string> &extension_list) {
+
+    std::srand(std::time(nullptr));
+    int randomNumber = std::rand();
+
+    OpenXLSX::XLDocument excelDocument;
+    excelDocument.create(folderPath + "/Data" + std::to_string(randomNumber)  + ".xlsx" );
 
     std::vector<std::filesystem::directory_entry> fileEntries;
     
@@ -37,15 +65,11 @@ void SharepointHandler::Sharepoint::convert_text_files_to_excel(const std::strin
         auto file_path = std::make_unique<std::string>(entry.path().string());
         auto file_extension = std::make_unique<std::string>(entry.path().extension().string());
 
-
-        
         if(!entry.is_directory() &&
         extension_list.find(*std::move(file_extension)) != extension_list.end()){
             std::ifstream filestream(*std::move(file_path));
 
             if(filestream.is_open()){
-
-
 
 
             }

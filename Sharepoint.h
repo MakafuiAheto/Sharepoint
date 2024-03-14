@@ -12,6 +12,7 @@
 #include <tuple>
 #include <exception>
 #include <set>
+#include <OpenXLSX.hpp>
 
 namespace SharepointHandler{
 
@@ -34,6 +35,9 @@ namespace SharepointHandler{
         std::string username;
         std::string password;
         std::string root_url;
+
+        [[maybe_unused]] static void write_to_new_sheet(const std::string& sheet_name, char delimiter,
+                                                        OpenXLSX::XLDocument& excel_document, std::ifstream& stream);
 
 
     };
